@@ -1,0 +1,32 @@
+.navbar {
+    height: 90px;
+
+    .wrapper {
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        overflow: hidden;
+        align-items: center;
+        -webkit-box-shadow: 0px 6px 9px -2px rgba(0, 0, 0, 0.49);
+        box-shadow: 0px 6px 9px -2px rgba(0, 0, 0, 0.49);
+
+        img {
+            width: 200px;
+            cursor: pointer;
+        }
+
+        .items {
+            height: fit-content;
+            width: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: #0B00FFff;
+
+            .icon {
+                cursor: pointer;
+            }
+        }
+    }
+}

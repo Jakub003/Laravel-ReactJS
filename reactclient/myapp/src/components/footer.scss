@@ -1,0 +1,60 @@
+.footer {
+    height: 100px;
+
+    .wrapper {
+        height: 100%;
+        background-color: #0B00FFff;
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            margin: 10px;
+            width: fit-content;
+            cursor: pointer;
+
+            .menu {
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        .center {
+            width: 200px;
+            padding-top: 20px;
+
+            .socials {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .icons {
+                    margin: 20px;
+
+                    .instagram {
+                        width: 22px;
+                    }
+
+                    &:hover {
+                        color: white;
+
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            word-spacing: 5px;
+        }
+    }
+}
