@@ -1,34 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
-import './home.scss'
+import './home.scss';
+import axios from 'axios';
 
 const Home = () => {
+  const [data, setData] = useState([]);
 
-  const posts = [
-    {
-      id: 1,
-      title: 'Hey',
-      desc: 'lorem ipsum lorem ipsum'
-    },
-    {
-      id: 2,
-      title: 'Hi',
-      desc: 'lorem ipsum lorem ipsum'
-    },
-    {
-      id: 3,
-      title: 'Hello',
-      desc: 'lorem ipsum lorem ipsum'
-    }
-  ];
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/")
+      .then((response) => setData(response.data))
+      .catch((error) => console.error(error));
+  }, []);
+
+console.log(data)
 
   return (
     <div className='home'>
-      {posts.map(post => (
+      {data.map(post => (
           <Card
-          key={post.id}
-          title={post.title}
-          desc={post.desc}
+          key={data.id}
+          title={data.title}
+          desc={data.desc}
           />
       ))
       }
