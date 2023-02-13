@@ -1,0 +1,28 @@
+GET http://127.0.0.1:8000/api/posts
+
+###
+
+
+POST http://127.0.0.1:8000/api/posts
+Content-Type: application/json
+
+{
+    "title": "My final title",
+    "content": "My final content"
+}
+
+###
+
+
+PUT http://127.0.0.1:8000/api/posts/6
+Content-Type: application/json
+
+{
+    "title": "My fifth title",
+    "content": "My fifth content"
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/posts/6
+
